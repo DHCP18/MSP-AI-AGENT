@@ -1,0 +1,13 @@
+Sheet: cloudtango_msp_listings.csv
+[9 rows x 4 columns]
+Column names: ,State,Company Name,Location,Profile URL
+0,Texas,ABC Tech Solutions,"Dallas, TX",https://www.cloudtango.net/company/abc-tech-solutions/
+1,Oklahoma,Sooner IT Services,"Oklahoma City, OK",https://www.cloudtango.net/company/sooner-it-services/
+2,Arkansas,Ozark Managed IT,"Little Rock, AR",https://www.cloudtango.net/company/ozark-managed-it/
+3,Louisiana,Bayou Tech Group,"New Orleans, LA",https://www.cloudtango.net/company/bayou-tech-group/
+4,Tennessee,Volunteer MSP,"Nashville, TN",https://www.cloudtango.net/company/volunteer-msp/
+5,Alabama,Crimson IT,"Birmingham, AL",https://www.cloudtango.net/company/crimson-it/
+6,Mississippi,Magnolia Systems,"Jackson, MS",https://www.cloudtango.net/company/magnolia-systems/
+7,Florida,Sunshine Tech,"Miami, FL",https://www.cloudtango.net/company/sunshine-tech/
+8,Georgia,Peach State IT,"Atlanta, GA",https://www.cloudtango.net/company/peach-state-it/
+

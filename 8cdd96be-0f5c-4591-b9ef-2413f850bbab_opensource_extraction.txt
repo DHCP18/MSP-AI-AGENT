@@ -1,0 +1,215 @@
+{
+    "chunks": [
+        {
+            "type": "txt",
+            "chunk_number": 1,
+            "lines": [
+                {
+                    "line_number": 1,
+                    "text": "import streamlit as st"
+                },
+                {
+                    "line_number": 2,
+                    "text": "import pandas as pd"
+                },
+                {
+                    "line_number": 3,
+                    "text": "import io"
+                },
+                {
+                    "line_number": 4,
+                    "text": ""
+                },
+                {
+                    "line_number": 5,
+                    "text": "# Title and instructions"
+                },
+                {
+                    "line_number": 6,
+                    "text": "st.title(\"AI Agent: Cloudtango MSP Enrichment\")"
+                },
+                {
+                    "line_number": 7,
+                    "text": "st.markdown(\"\"\""
+                },
+                {
+                    "line_number": 8,
+                    "text": "Upload your MSP listings CSV file from Cloudtango."
+                },
+                {
+                    "line_number": 9,
+                    "text": "Click the button below to simulate enrichment using sample ZoomInfo data."
+                },
+                {
+                    "line_number": 10,
+                    "text": "Once enriched, you can download the updated CSV file."
+                },
+                {
+                    "line_number": 11,
+                    "text": "\"\"\")"
+                },
+                {
+                    "line_number": 12,
+                    "text": ""
+                },
+                {
+                    "line_number": 13,
+                    "text": "# File uploader"
+                },
+                {
+                    "line_number": 14,
+                    "text": "uploaded_file = st.file_uploader(\"Upload Cloudtango MSP CSV\", type=[\"csv\"])"
+                },
+                {
+                    "line_number": 15,
+                    "text": ""
+                },
+                {
+                    "line_number": 16,
+                    "text": "# Placeholder for enriched data"
+                },
+                {
+                    "line_number": 17,
+                    "text": "enriched_df = None"
+                },
+                {
+                    "line_number": 18,
+                    "text": ""
+                },
+                {
+                    "line_number": 19,
+                    "text": "# Simulate enrichment function"
+                },
+                {
+                    "line_number": 20,
+                    "text": "def simulate_enrichment(df):"
+                },
+                {
+                    "line_number": 21,
+                    "text": "enriched = df.copy()"
+                },
+                {
+                    "line_number": 22,
+                    "text": "enriched[\"Industry\"] = \"Managed Services\""
+                },
+                {
+                    "line_number": 23,
+                    "text": "enriched[\"Company Size\"] = \"51-200\""
+                },
+                {
+                    "line_number": 24,
+                    "text": "enriched[\"Revenue\"] = \"$5M-$10M\""
+                },
+                {
+                    "line_number": 25,
+                    "text": "enriched[\"Contact Name\"] = \"John Doe\""
+                },
+                {
+                    "line_number": 26,
+                    "text": "enriched[\"Contact Title\"] = \"IT Director\""
+                },
+                {
+                    "line_number": 27,
+                    "text": "enriched[\"Contact Email\"] = \"johndoe@example.com\""
+                },
+                {
+                    "line_number": 28,
+                    "text": "enriched[\"Tag\"] = \"AI AGENT MSP SEARCH CLOUD TANGO\""
+                },
+                {
+                    "line_number": 29,
+                    "text": "return enriched"
+                },
+                {
+                    "line_number": 30,
+                    "text": ""
+                },
+                {
+                    "line_number": 31,
+                    "text": "# Process uploaded file"
+                },
+                {
+                    "line_number": 32,
+                    "text": "if uploaded_file is not None:"
+                },
+                {
+                    "line_number": 33,
+                    "text": "df = pd.read_csv(uploaded_file)"
+                },
+                {
+                    "line_number": 34,
+                    "text": "st.write(\"\ud83d\udcc4 Preview of Uploaded MSP Listings:\")"
+                },
+                {
+                    "line_number": 35,
+                    "text": "st.dataframe(df)"
+                },
+                {
+                    "line_number": 36,
+                    "text": ""
+                },
+                {
+                    "line_number": 37,
+                    "text": "if st.button(\"Simulate ZoomInfo Enrichment\"):"
+                },
+                {
+                    "line_number": 38,
+                    "text": "enriched_df = simulate_enrichment(df)"
+                },
+                {
+                    "line_number": 39,
+                    "text": "st.success(\"\u2705 Enrichment complete!\")"
+                },
+                {
+                    "line_number": 40,
+                    "text": "st.write(\"\ud83d\udcc4 Preview of Enriched Data:\")"
+                },
+                {
+                    "line_number": 41,
+                    "text": "st.dataframe(enriched_df)"
+                },
+                {
+                    "line_number": 42,
+                    "text": ""
+                },
+                {
+                    "line_number": 43,
+                    "text": "# Download enriched CSV"
+                },
+                {
+                    "line_number": 44,
+                    "text": "csv_buffer = io.StringIO()"
+                },
+                {
+                    "line_number": 45,
+                    "text": "enriched_df.to_csv(csv_buffer, index=False)"
+                },
+                {
+                    "line_number": 46,
+                    "text": "st.download_button("
+                },
+                {
+                    "line_number": 47,
+                    "text": "label=\"Download Enriched CSV\","
+                },
+                {
+                    "line_number": 48,
+                    "text": "data=csv_buffer.getvalue(),"
+                },
+                {
+                    "line_number": 49,
+                    "text": "file_name=\"zoominfo_enriched_msp_listings.csv\","
+                },
+                {
+                    "line_number": 50,
+                    "text": "mime=\"text/csv\""
+                },
+                {
+                    "line_number": 51,
+                    "text": ")"
+                }
+            ],
+            "token_count": 236
+        }
+    ]
+}
